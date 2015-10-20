@@ -8,8 +8,12 @@ provisioner:
 platforms:
   - name: windows-2012r2
     driver:
-      box: mwrock/Windows2012R2
-      
+      gui: true
+      box: opentable/win-2012r2-standard-amd64-nocm
+      network:
+        - ["forwarded_port", {guest: 389, host: 8389}]
+        - ["forwarded_port", {guest: 636, host: 8636}]
+
 suites:
   - name: default
     run_list:
