@@ -1,0 +1,7 @@
+name 'chef-server-ldap-host'
+maintainer 'The Authors'
+maintainer_email 'you@example.com'
+license 'all_rights'
+description 'Installs/Configures chef-server-ldap-host'
+long_description 'Installs/Configures chef-server-ldap-host'
+version '0.1.0'

@@ -1,0 +1,17 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: windows-2012r2
+    driver:
+      box: mwrock/Windows2012R2
+      
+suites:
+  - name: default
+    run_list:
+      - recipe[chef-server-ldap-host::default]
+    attributes:
