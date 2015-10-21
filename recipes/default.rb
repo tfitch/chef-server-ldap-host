@@ -20,6 +20,8 @@ windows_ad_domain "chefio.local" do
   domain_user "Administrator"
   restart false
 end
+# after creating and joining the domain we'll need to reboot before the users are created
+# Test Kitchen doesn't restart a run after a Windows reboot, so kitchen converge twice.
 
 for i in 1..10 do
   windows_ad_user "Chef #{i}" do
